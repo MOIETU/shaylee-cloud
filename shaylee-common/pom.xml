@@ -3,13 +3,49 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>shaylee-cloud</artifactId>
+        <artifactId>shaylee-archetype</artifactId>
         <groupId>com.shaylee</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>shaylee-common</artifactId>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>shaylee-common-core</module>
+        <module>shaylee-common-redis</module>
+        <module>shaylee-common-gateway</module>
+        <module>shaylee-common-rabbit</module>
+        <module>shaylee-common-datasource</module>
+        <module>shaylee-common-web</module>
+        <module>shaylee-common-cloud</module>
+        <module>shaylee-common-oss</module>
+        <module>shaylee-common-security</module>
+        <module>shaylee-common-mongodb</module>
+        <module>shaylee-common-log</module>
+        <module>shaylee-common-rpc</module>
+        <module>shaylee-common-websocket</module>
+    </modules>
 
+    <properties>
+        <!-- common-core -->
+        <commons.io.version>2.6</commons.io.version>
+        <commons.fileupload.version>1.3.3</commons.fileupload.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <guava.version>26.0-jre</guava.version>
+        <joda.time.version>2.10.5</joda.time.version>
+        <okhttp.version>4.6.0</okhttp.version>
+        <!-- common-datasource -->
+        <mysql.connector.version>8.0.12</mysql.connector.version>
+        <hikari.version>3.4.2</hikari.version>
+        <mapper.version>2.1.5</mapper.version>
+        <pagehelper.version>1.2.13</pagehelper.version>
+        <shardingsphere.version>4.0.0</shardingsphere.version>
+        <!-- common-web -->
+        <bitwalker.version>1.21</bitwalker.version>
+        <!-- common-oss -->
+        <aliyun.oss.version>3.5.0</aliyun.oss.version>
+        <!-- common-security -->
+        <jwt.version>0.11.1</jwt.version>
+    </properties>
 </project>
